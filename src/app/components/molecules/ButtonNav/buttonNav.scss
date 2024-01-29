@@ -1,8 +1,15 @@
-.glow{
+.glowCircle{
     &:hover {
         background-color: #D19C28;
         box-shadow: 0 0 3px #D19C28, 0 0 6px #D19C28, 0 0 10px #D19C28; 
         transition: box-shadow 0.3s ease-in-out; 
         cursor: pointer;
     }
+}
+
+.glowCircleActive{
+    background-color: #D19C28;
+    box-shadow: 0 0 3px #D19C28, 0 0 6px #D19C28, 0 0 10px #D19C28; 
+    transition: box-shadow 0.3s ease-in-out; 
+    cursor: pointer;
 }
