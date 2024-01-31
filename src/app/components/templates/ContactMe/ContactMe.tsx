@@ -3,8 +3,8 @@ import './contactMe.scss';
 
 const ContactMe = () => {
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-red">
-      <p>Main</p>
+    <div className="flex justify-center items-center w-screen h-full">
+      <p className="text-white">Contact</p>
     </div>
   );
 };

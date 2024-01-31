@@ -3,8 +3,8 @@ import './main.scss';
 
 const Main = () => {
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-red">
-      <p>Main</p>
+    <div className="flex justify-center items-center w-screen h-full">
+      <p className="text-white">Main</p>
     </div>
   );
 };

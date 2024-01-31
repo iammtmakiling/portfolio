@@ -9,7 +9,7 @@ const ButtonNav = () => {
     setPage(state); // Set the page to "about" when the div is clicked
   };
   return (
-    <div className="flex justify-center items-center w-screen">
+    <div className="flex justify-center items-center w-screen pb-20 pt-10">
       <div className="flex">
         <div
           className={`w-3 h-3 bg-white rounded-full mx-2 glowCircle ${

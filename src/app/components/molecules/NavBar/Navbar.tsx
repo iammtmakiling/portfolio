@@ -9,7 +9,7 @@ const NavBar = () => {
     setPage(state); // Set the page to "about" when the div is clicked
   };
   return (
-    <div className="flex justify-between items-center p-20 pt-10">
+    <div className="flex justify-between items-center p-20 pt-10 pb-5">
         <div className="flex items-center">
             <span className="text-3xl font-bold text-white"><a href="/" className='glowText'>M</a></span>
         </div>

@@ -3,8 +3,8 @@ import './about.scss';
 
 const About = () => {
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-red">
-      <p>Main</p>
+    <div className="flex justify-center items-center w-screen h-full">
+      <p className="text-white">About</p>
     </div>
   );
 };
