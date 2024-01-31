@@ -4,7 +4,7 @@ import React from 'react';
 import './project.scss';
 import { Cards, ButtonNav } from '../../molecules';
 import {create} from 'zustand';
-
+import listOfProjects from "./listOfProjects";
 interface ProjectState {
   page: number;
   setPage: (page: number) => void;
@@ -17,24 +17,19 @@ export const useProjectState = create<ProjectState>()((set) => ({
 const Project = () => {
   return (
     <div className='flex flex-col justify-center items-center gap-5 w-screen max-h-full'>
-      <p className='text-4xl text-white font-extrabold'>Projects</p>
-      <div className="flex flex-wrap justify-center items-center w-screen max-h-full pl-20 pr-20">  
-      <div className="flex gap-3 flex-wrap items-center w-[90%] min-h-full">
-          <Cards
-            title="Project Face 2"
-            subtitle="Project Manager"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-          />
-          <Cards
-            title="Project Face 2"
-            subtitle="Project Manager"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-          />
-          <Cards
-            title="Project Face 2"
-            subtitle="Project Manager"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-          />
+      <p className='text-6xl text-white font-bold'>Projects</p>
+      <div className="flex flex-wrap justify-center items-center w-screen max-h-full pb-20 pl-20 pr-20">  
+      <div className="flex gap-5 flex-wrap justify-center items-center w-[90%] min-h-full">
+          {listOfProjects.map((project, index) => (
+            <div key={index}>
+              <Cards
+                title={project.title}
+                subtitle={project.subtitle}
+                description={project.description}
+                photo={project.photo}
+              />
+            </div>
+          ))}
         </div>
       </div>
       {/* <div className="flex flex-2 justify-center items-center w-screen pb-20 pt-10">

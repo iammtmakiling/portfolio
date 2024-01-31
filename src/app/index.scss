@@ -1,3 +1,16 @@
 .bg-color{
     background-color: #060606;
 }
+
+::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #D19C28; 
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
