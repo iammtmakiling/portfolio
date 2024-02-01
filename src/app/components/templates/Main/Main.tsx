@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Main = () => {
   return (
-    <div className="flex flex-row justify-center items-center w-full h-full lg:gap-5 xl:gap-0 pl-20 pr-20">
+    <div className="flex flex-row justify-center items-center w-full min-h-[80vh] lg:gap-5 xl:gap-0 pl-20 pr-20">
       <div className='flex w-full lg:w-[70%] xl:w-[65%] flex-col gap-3 w-full justify-center items-center text-white text-center h-full'>
         <p className='text-base font-base'>Hello I&#39;m</p>
         <p className='text-3xl sm:text-5xl md:text-6xl xl:text-7xl text-color'>Michael Jay Makiling</p>

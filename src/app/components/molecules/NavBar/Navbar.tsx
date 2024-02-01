@@ -8,30 +8,28 @@ const NavBar = () => {
   const pageState = (state : String) => {
     setPage(state); // Set the page to "about" when the div is clicked
   };
+  const scrollToSection = (sectionId:string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
-    <div className="flex justify-between items-center p-20 pt-10 pb-5">
+    <div className="w-screen flex justify-between items-center p-20 pt-5 pb-5 sticky top-0 z-50 bg-blur backdrop-blur-xl">
         <div className="flex items-center">
             <span className="text-3xl font-bold text-white"><a href="/" className='glowText'>M</a></span>
         </div>
         <div className="flex space-x-4">
-            <div className={`text-white flex items-center ${
-              page === "home" ? "text-color" : ""
-            }`
-            }
-            onClick={() => pageState("home")}
-            ><p className='glowText'>Home</p></div>
-            <div className={`text-white flex items-center ${
-              page === "about" ? "text-color" : ""
-            }`} 
-            onClick={() => pageState("about")}
-            ><p className='glowText'>About</p></div>
-            <div className={`text-white flex items-center ${
-              page === "projects" ? "text-color" : ""
-            }`}
-            onClick={() => pageState("projects")}
-            ><p className='glowText'>Projects</p></div>
+            <div className="text-white flex items-center scroll-smooth">
+              <p className='glowText' onClick={() => scrollToSection('main')}>Home</p>
+            </div>
+            <div className="text-white flex items-center">
+              <p className='glowText' onClick={() => scrollToSection('about')}>About</p>
+            </div>
+            <div className="text-white flex items-center">
+              <p className='glowText' onClick={() => scrollToSection('projects')}>Projects</p>
+            </div>
             <div className={`button-color font-bold text-white px-4 py-2 rounded-full focus:outline-none glow-button`}
-            onClick={() => pageState("contact")}
             >Contact</div>
         </div>
     </div>

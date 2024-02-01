@@ -16,7 +16,7 @@ export const useProjectState = create<ProjectState>()((set) => ({
 }));
 const Project = () => {
   return (
-    <div className='flex flex-col justify-center items-center gap-5 w-screen max-h-full'>
+    <div  id="projects" className='flex flex-col justify-center items-center gap-5 w-screen max-h-full pt-20'>
       <p className='text-6xl text-white font-bold'>Projects</p>
       <div className="flex flex-wrap justify-center items-center w-screen max-h-full pb-20 pl-20 pr-20">  
       <div className="flex gap-5 flex-wrap justify-center items-center w-[90%] min-h-full">
