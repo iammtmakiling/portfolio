@@ -1,28 +1,45 @@
 import React from 'react';
 
-const Work = () => {
+interface WorkData {
+    company: string;
+    place: string;
+    job: string;
+    timeline: string;
+    achievements: string[];
+  }
+  
+const Work: React.FC<WorkData> = ({
+    company,
+    place,
+    job,
+    timeline,
+    achievements,
+  }) => {
   return (
-    <div className="flex flex-col justify-center items-start w-[80%] h-auto">
+    <div className="flex flex-col justify-center items-start w-[60%] h-auto">
         <div className="flex flex-row justify-between w-full">
             <p className='text-lg text-color font-bold'>
-                Mayon Innovations Lab, Inc.
+                {company}
             </p>
             <p className='text-base text-color'>
-                Remote
+                {place}
             </p>
         </div>
         <div className="flex flex-row justify-between w-full">
-            <p className='text-base text-white italic font-thin'>
-                Front End Developer Intern
+            <p className='text-base text-white italic'>
+                {job}
             </p>
-            <p className='text-base text-white font-thin'>
-                July 2023 - November 2023
+            <p className='text-base text-white'>
+                {timeline}
             </p>
         </div>
-        <div className="flex flex-row justify-start w-full mt-3 pl-20 text-justify">
+        <div className="flex flex-row justify-start w-full mt-3 pl-20 text-justify font-thin">
             <ul className='list-disc'>
-                <li className="text-white text-sm font-base">Created and implemented responsive design principles for optimal user experiences, utilizing Figma for wireframing 
-                and prototyping.</li>
+                {achievements.map((achievement, index) => (
+                <li key={index} className="text-white text-base">
+                    {achievement}
+                </li>
+                ))}
             </ul>  
         </div>
     </div>
