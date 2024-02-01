@@ -1,7 +1,7 @@
 'use client'
 
 import {Main, About, Projects, ContactMe, Background} from "./components/templates";
-import { NavBar } from "./components/molecules";
+import { NavBar, Footer } from "./components/molecules";
 import './index.scss';
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
               <Main/>
               <About/>
               <Projects/>
+              <Footer/>
             </div>
           </div>
         </div>
